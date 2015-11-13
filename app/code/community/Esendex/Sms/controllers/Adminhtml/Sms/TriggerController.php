@@ -38,10 +38,10 @@ class Esendex_Sms_Adminhtml_Sms_TriggerController extends Mage_Adminhtml_Control
         'delete-error'          => 'There was an error deleting notification',
         'mass-delete-invalid'   => 'Please select Notifications to delete',
         'mass-delete-error'     => 'There was an error deleting notifications',
-        'mass-delete-success'   => 'Total of %d notification%s %s successfully deleted',
+        'mass-delete-success'   => 'Total of %%d notification%s %s successfully deleted',
         'mass-status-invalid'   => 'Please select Notifications',
         'mass-status-error'     => 'There was an error updating notifications',
-        'mass-status-success'   => 'Total of %d notification%s %s successfully updated',
+        'mass-status-success'   => 'Total of %%d notification%s %s successfully updated',
     );
 
     /**
@@ -312,10 +312,12 @@ class Esendex_Sms_Adminhtml_Sms_TriggerController extends Mage_Adminhtml_Control
             }
             $count = count($triggerIds);
             $this->_getSession()->addSuccess(Mage::helper('esendex_sms')->__(
-                $this->messages['mass-status-success'],
-                $count,
-                $count > 1 ? 's' : '',
-                $count > 1 ? 'were' : 'was'
+                sprintf(
+                    $this->messages['mass-status-success'],
+                    $count > 1 ? 's' : '',
+                    $count > 1 ? 'were' : 'was'
+                ),
+                $count
             ));
         } catch (Mage_Core_Exception $e) {
             $this->_getSession()->addError($e->getMessage());

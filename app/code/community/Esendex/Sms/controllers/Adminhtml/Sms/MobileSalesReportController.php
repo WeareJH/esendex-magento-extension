@@ -40,10 +40,10 @@ class Esendex_Sms_Adminhtml_Sms_MobileSalesReportController extends Esendex_Sms_
         'delete-error'          => 'There was an error deleting Mobile Sales Report',
         'mass-delete-invalid'   => 'Please select Admin Sales Reports to delete',
         'mass-delete-error'     => 'There was an error deleting Admin Sales Reports',
-        'mass-delete-success'   => 'Total of %d Admin Sales Reports were successfully deleted',
+        'mass-delete-success'   => 'Total of %%d Admin Sales Reports were successfully deleted',
         'mass-status-invalid'   => 'Please select Admin Sales Reports',
         'mass-status-error'     => 'There was an error updating Admin Sales Reports',
-        'mass-status-success'   => 'Total of %d Admin Sales Reports were successfully updated',
+        'mass-status-success'   => 'Total of %%d Admin Sales Reports were successfully updated',
     );
 
     /**
