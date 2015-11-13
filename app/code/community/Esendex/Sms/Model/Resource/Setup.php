@@ -185,7 +185,11 @@ class Esendex_Sms_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup
             $eventId = $event['entity_id'];
         }
 
-        $this->getConnection()->insert($this->getTable('esendex_sms/event_sample_message_template'), array(
+        $table = $this->getTable('esendex_sms/event_sample_message_template');
+
+        $this->getconnection()->delete($table, sprintf('event_id = %d AND locale_code = "%s"', $eventId, $localeCode));
+
+        $this->getConnection()->insert($table, array(
             'event_id'          => $eventId,
             'locale_code'       => $localeCode,
             'message_template'  => $message,
