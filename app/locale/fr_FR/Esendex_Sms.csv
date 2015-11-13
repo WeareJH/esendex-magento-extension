@@ -174,3 +174,6 @@
 "Don't have an Esendex Account? %sCreate a FREE TRIAL account%s - we'll even give you 25 FREE SMS to get you started!","Vous n'avez pas de compte Esendex ? %sCréez un compte d'essai%s - Nous vous offrons 25 SMS pour commencer."
 "Your Esendex Account details were not recognised. Your account may have expired or the details are incorrect","Les paramètres de votre compte Esendex n'ont pas été reconnus. Votre compte à peut être expiré ou les paramètres indiqués sont incorrects."
 "Please double check your account details or contact our support team at <a href=""mailto:support@esendex.com"">support@esendex.com</a>","Merci de vérifier les paramètres de votre compte ou contactez notre équipe de support via <a href=""mailto:support@esendex.fr"">support@esendex.fr</a>"
+
+"Account details are invalid or account has expired","Les paramètres de compte indiqués sont incorrects ou votre compte a expiré."
+"Esendex Account %s details are correct","Les paramètres du compte Esendex %s sont incorrects"
