@@ -78,6 +78,7 @@
 "Updated at","Actualizado"
 "Action","Acción"
 ,
+"Edit Notification","Editar Notificación"
 "Add Notification","Añadir Notificación"
 "Edit","Editar"
 "Delete","Borrar"
@@ -92,7 +93,7 @@
 "Add New Mobile Sales Report","Añadir Nuevo Informe de Ventas Móvil"
 "Admin Sales Report","Admin de Informe de Ventas "
 ,
-"Admin Sales Report' specific fields","Campos específicos del Informe de Ventas"
+"'%s' specific fields","'%s' campos específicos"
 "Recipients","Destinatarios"
 "Enter one mobile number per line. To send internationally please add the country code e.g. +447875123456","Introduce un número de móvil por línea. Para enviar de forma internacional hay que añadir el código de país, por ejemplo +447875123456"
 "Frequency","Frecuencia"
