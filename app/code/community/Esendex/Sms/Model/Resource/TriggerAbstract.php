@@ -99,9 +99,15 @@ abstract class Esendex_Sms_Model_Resource_TriggerAbstract extends Mage_Core_Mode
     {
         $oldStores = $this->lookupStoreIds($object->getId());
         $newStores = (array)$object->getStores();
+
         if (empty($newStores)) {
             $newStores = (array)$object->getStoreId();
         }
+
+        if (empty($newStores)) {
+            return parent::_afterSave($object);
+        }
+
         $table  = $this->getTable('esendex_sms/trigger_store');
         $insert = array_diff($newStores, $oldStores);
         $delete = array_diff($oldStores, $newStores);
