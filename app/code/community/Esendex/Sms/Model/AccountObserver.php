@@ -39,10 +39,12 @@ class Esendex_Sms_Model_AccountObserver
 
         if ($account instanceof Account) {
             Mage::getSingleton('core/session')->addSuccess(
-                sprintf('Esendex Account %s details are correct', $account->reference())
+                Mage::helper('esendex_sms')->__('Esendex Account %s details are correct', $account->reference())
             );
         } else {
-            Mage::getSingleton('core/session')->addError('Account details are invalid or account has expired');
+            Mage::getSingleton('core/session')->addError(
+                Mage::helper('esendex_sms')->__('Account details are invalid or account has expired')
+            );
         }
 
         Mage::dispatchEvent('esendex_account_details_updated', array('account' => $account));
