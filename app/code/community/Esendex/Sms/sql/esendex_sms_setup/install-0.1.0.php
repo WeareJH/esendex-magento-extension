@@ -247,8 +247,8 @@ $table = $this->getConnection()
     )
     ->addIndex(
         'event_id_locale_code_unique',
-        ['event_id', 'locale_code'],
-        ['type' => Varien_Db_Adapter_Interface::INDEX_TYPE_UNIQUE]
+        array('event_id', 'locale_code'),
+        array('type' => Varien_Db_Adapter_Interface::INDEX_TYPE_UNIQUE)
     )
     ->setComment('Event Sample Message Template Table');
 
